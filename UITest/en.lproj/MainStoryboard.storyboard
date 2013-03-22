@@ -107,11 +107,30 @@
         <!--View Controller-->
         <scene sceneID="1eo-Sx-ZhI">
             <objects>
-                <viewController storyboardIdentifier="Item One" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nGL-09-fRW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Item One" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nGL-09-fRW" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iUM-pl-DKp">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U8-Bp-zq5">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ajb-0Y-Oz1" kind="modal" identifier="FirstViewToModal" id="kSV-wY-Qdp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2U8-Bp-zq5" firstAttribute="centerX" secondItem="iUM-pl-DKp" secondAttribute="centerX" type="default" id="Pld-wo-JW3"/>
+                            <constraint firstItem="2U8-Bp-zq5" firstAttribute="top" secondItem="iUM-pl-DKp" secondAttribute="top" constant="20" symbolic="YES" type="default" id="yce-w7-bVs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vcm-36-ssp"/>
                 </viewController>
@@ -309,4 +328,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="kSV-wY-Qdp"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,7 +16,7 @@
 @implementation ViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"ViewToModal"]){
+    if([segue.identifier isEqualToString:@"ViewToModal"] || [segue.identifier isEqualToString:@"FirstViewToModal"]){
         UINavigationController *nvc = segue.destinationViewController;
         ModalViewController *mvc = nvc.viewControllers[0];
         mvc.delegate = self;
